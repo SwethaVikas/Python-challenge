@@ -64,7 +64,15 @@ with open(budget_data_csv, newline="") as csvfile:
     print("Greatest Decrease in Profits "+ str(Max_decrease_losses_date) + " $" + str(Max_decrease_losses_amount)) 
 
 
-
+    # export a text file with the results.
+with open('Financial Analysis.txt', 'w')as text:
+    text.write("Financial Analysis"+ "\n") 
+    text.write("--------------------------------")
+    text.write("Total Months " + str(total_months)+ "\n")
+    text.write("Total " + "$"+ str(total_Profit_Losses)+ "\n")
+    text.write("Average " +"$"+ str(int(average_Profit_Losses))+ "\n")
+    text.write("Greatest Increase in Profits " +str(Max_increase_profits_date) +" $" + str(Max_increase_profits_amount)+ "\n")
+    text.write("Greatest Decrease in Profits "+ str(Max_decrease_losses_date) + " $" + str(Max_decrease_losses_amount)+ "\n") 
 
 
 
