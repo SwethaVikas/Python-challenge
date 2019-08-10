@@ -65,3 +65,17 @@ with open(Poll_Data_csv, newline="") as csvfile:
     print(f"Winner:  {winner}")
     print("--------------------------")
     
+    #export a text file with the results
+with open('Financial Analysis.txt', 'w')as text:
+    text.write("Election Results\n")
+    text.write("-----------------------------\n")
+    text.write(f"Total Votes:  {number_votes}\n")
+    text.write("-----------------------------\n")
+    for icount in range(len(candidates)):
+        text.write(f"{candidates[icount]}: {Vote_percentages[icount]}% ({Count[icount]})\n")
+        text.write("-----------------------------\n")
+        text.write(f"Winner:  {winner}\n")
+        text.write("-----------------------------\n")
+    
+    # Close the text file
+    filewriter.close()
